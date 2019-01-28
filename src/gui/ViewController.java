@@ -35,7 +35,7 @@ public class ViewController implements Initializable{
 		double number2 = Double.parseDouble(txtNumber2.getText());
 		Double sum = number1 + number2;
 		
-		labelResult.setText(String.format("%.2f", sum));
+		labelResult.setText(String.format("%.1f", sum));
 		}
 		catch (NumberFormatException e) {
 			Alerts.showAlert("Erro", null, e.getMessage(), AlertType.ERROR);
@@ -45,7 +45,7 @@ public class ViewController implements Initializable{
 	}
 
 	@Override
-	public void initialize(URL location, ResourceBundle resources) {
+	public void initialize(URL url, ResourceBundle rb) {
 		Constraints.setTextFieldDouble(txtNumber1);
 		Constraints.setTextFieldDouble(txtNumber2);
 		Constraints.setTextFieldMaxLength(txtNumber1, 12);
